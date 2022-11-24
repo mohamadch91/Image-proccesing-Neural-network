@@ -150,7 +150,6 @@ for epoch_count in range(epoch):
   random.shuffle(train_set)
   minimize_train_set=train_set[:200]
   for batch_count in range(batch_size):
-    # print("batch count "+str(batch_count+1))
     grad_W1 = np.zeros((n_h_1,n_x))
     grad_W2 = np.zeros((n_h_2,n_h_1))
     grad_W3 = np.zeros((n_y,n_h_2))
@@ -158,7 +157,6 @@ for epoch_count in range(epoch):
     grad_b2 = np.zeros((n_h_2,1))
     grad_b3 = np.zeros((n_y,1)) 
     for i in range(batch_num):
-      # print("mini batch num is "+str(i+1)) 
       reshape_train=minimize_train_set[batch_count*20+i][0]
       reshape_train_lables=minimize_train_set[batch_count*20+i][1]
       S0 = reshape_train
@@ -172,7 +170,6 @@ for epoch_count in range(epoch):
       for j in range(grad_W3.shape[0]):
           for k in range(grad_W3.shape[1]):
               grad_W3[j, k] += 2 * (S3[j, 0] - reshape_train_lables[j, 0]) * S3[j, 0] * (1 - S3[j, 0]) * S2[k, 0]
-             # print(grad_W3)
       # bias
       for j in range(grad_b3.shape[0]):
               grad_b3[j, 0] += 2 * (S3[j, 0] - reshape_train_lables[j, 0]) * S3[j, 0] * (1 - S3[j, 0])
@@ -271,7 +268,6 @@ for epoch_count in range(epoch):
   random.shuffle(train_set)
   minimize_train_set=train_set[:200]
   for batch_count in range(batch_size):
-    # print("batch count "+str(batch_count+1))
     grad_W1 = np.zeros((n_h_1,n_x))
     grad_W2 = np.zeros((n_h_2,n_h_1))
     grad_W3 = np.zeros((n_y,n_h_2))
@@ -279,7 +275,6 @@ for epoch_count in range(epoch):
     grad_b2 = np.zeros((n_h_2,1))
     grad_b3 = np.zeros((n_y,1)) 
     for i in range(batch_num):
-      # print("mini batch num is "+str(i+1)) 
       reshape_train=minimize_train_set[batch_count*20+i][0]
       reshape_train_lables=minimize_train_set[batch_count*20+i][1]
       S0 = reshape_train
@@ -385,7 +380,6 @@ for epoch_count in range(epoch):
     random.shuffle(train_set)
     minimize_train_set = train_set[:1962]
     for batch_count in range(batch_size):
-        # print("batch count " + str(batch_count + 1))
         grad_W1 = np.zeros((n_h_1, n_x))
         grad_W2 = np.zeros((n_h_2, n_h_1))
         grad_W3 = np.zeros((n_y, n_h_2))
@@ -393,7 +387,6 @@ for epoch_count in range(epoch):
         grad_b2 = np.zeros((n_h_2, 1))
         grad_b3 = np.zeros((n_y, 1))
         for i in range(batch_num):
-            # print("mini batch num is " + str(i + 1))
             reshape_train = minimize_train_set[batch_count * 196 + i][0]
             reshape_train_lables = minimize_train_set[batch_count * 196 + i][1]
             S1 = sigmoid(W1 @ reshape_train + b1)
