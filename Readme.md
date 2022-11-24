@@ -2,7 +2,9 @@
 
 This is a simple example of image processing with ANN. The goal is to classify images of Fruits. The dataset [Fruits-360](https://www.kaggle.com/moltean/fruits) is used.
 
-alsp calculate the accuracy of the model.
+also calculate the accuracy of the model.
+
+you can find project description in perisan [here](./ANN_Project_Persian.pdf)
 ## Requirements
 
 - Python 3.6
